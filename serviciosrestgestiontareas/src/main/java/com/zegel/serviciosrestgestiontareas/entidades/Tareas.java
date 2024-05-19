@@ -5,16 +5,17 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "TAREAS")
 public class Tareas {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Enumerated(EnumType.STRING)
+
     private Long id;
-    private String Titulo;
-    private String Descripcion;
-    private LocalDate Vencimiento;
-    private TaskStatus estado;
+    private String titulo;
+    private String descripcion;
+    private LocalDate vencimiento;
+    private String estado;
 
     public Long getId() {
         return id;
@@ -25,34 +26,34 @@ public class Tareas {
     }
 
     public String getTitulo() {
-        return Titulo;
+        return titulo;
     }
 
     public void setTitulo(String titulo) {
-        Titulo = titulo;
+        this.titulo = titulo;
     }
 
     public String getDescripcion() {
-        return Descripcion;
+        return descripcion;
     }
 
     public void setDescripcion(String descripcion) {
-        Descripcion = descripcion;
+        this.descripcion = descripcion;
     }
 
     public LocalDate getVencimiento() {
-        return Vencimiento;
+        return vencimiento;
     }
 
     public void setVencimiento(LocalDate vencimiento) {
-        Vencimiento = vencimiento;
+        this.vencimiento = vencimiento;
     }
 
-    public TaskStatus getEstado() {
+    public String getEstado() {
         return estado;
     }
 
-    public void setEstado(TaskStatus estado) {
+    public void setEstado(String estado) {
         this.estado = estado;
     }
 }
