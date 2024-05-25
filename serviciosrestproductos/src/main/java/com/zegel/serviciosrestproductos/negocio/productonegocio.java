@@ -29,4 +29,22 @@ public class productonegocio {
         return (List<producto>) productoRepositorio.findAll();
     }
 
+    // Actualizar
+    public producto actualizar(producto producto) {
+        producto p = productoRepositorio.findById(producto.getCodigo()).get();
+        if(p!=null){
+            return productoRepositorio.save(producto);
+        }else {
+            return null;
+        }
+    }
+
+    public producto borrar(Long codigo) {
+        producto producto = productoRepositorio.findById(codigo).get();
+
+        if (producto!=null){
+            productoRepositorio.delete(producto);
+        }
+        return producto;
+    }
 }

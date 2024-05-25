@@ -32,4 +32,19 @@ public class ProductoREST {
         }
     }
 
+    @PutMapping("/actualizar")
+    public producto actualizar(@RequestBody producto producto){
+        try {
+            return productoNegocio.actualizar(producto);
+        }
+        catch (Exception e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No es posible actualizar");
+        }
+    }
+
+    @DeleteMapping("/producto/{codigo}")
+    public producto borrar(@PathVariable(value = "codigo") Long codigo){
+        return productoNegocio.borrar(codigo);
+    }
+
 }
