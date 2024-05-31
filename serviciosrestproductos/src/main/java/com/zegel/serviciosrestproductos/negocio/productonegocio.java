@@ -38,7 +38,7 @@ public class productonegocio {
             return null;
         }
     }
-
+    // eliminar
     public producto borrar(Long codigo) {
         producto producto = productoRepositorio.findById(codigo).get();
 
