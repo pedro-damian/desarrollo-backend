@@ -47,4 +47,8 @@ public class productonegocio {
         }
         return producto;
     }
+
+    public producto obtenerProductoMayorPrecio() {
+        return productoRepositorio.obtenerProductoMayorPrecio();
+    }
 }

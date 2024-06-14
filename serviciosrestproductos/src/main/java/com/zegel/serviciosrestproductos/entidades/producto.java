@@ -1,6 +1,6 @@
 package com.zegel.serviciosrestproductos.entidades;
 
-// esta importacion si definimos al final un astrisco nos trae todas las librerias que necesitemos
+
 import jakarta.persistence.*;
 
 //notacion @Entity sirve para importar la libreria Entity
