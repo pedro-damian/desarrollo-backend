@@ -59,6 +59,12 @@ public class servicioREST {
         return productoNegocio.obtenerProductoMayorPrecio();
     }
 
+    // query personalizado
+    @GetMapping("/producto/preciomayorque")
+    public List<producto> obtenerProductoConMayorPrecioQue(@RequestParam("precioMinimo") Double precioMinimo){
+        return productoNegocio.obtenerProductoConMayorPrecioQue(precioMinimo);
+    }
+
     //---------------- SECCION VENTAS ------------------------
 //    @PostMapping("/venta")
 //    public Venta grabarventas(@RequestBody Venta venta) {
