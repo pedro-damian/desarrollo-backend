@@ -1,9 +1,9 @@
 package com.zegel.zegel.claim_book.controlador;
 
-//import com.zegel.claim_book.entidades.seguridad.JwtRequest;
-//import com.zegel.claim_book.entidades.seguridad.JwtResponse;
-//import com.zegel.claim_book.seguridad.JwtUtil;
-//import com.zegel.claim_book.seguridad.MyUserDetailsService;
+import com.zegel.zegel.claim_book.entidades.seguridad.JwtRequest;
+import com.zegel.zegel.claim_book.entidades.seguridad.JwtResponse;
+import com.zegel.zegel.claim_book.seguridad.JwtUtil;
+import com.zegel.zegel.claim_book.seguridad.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
