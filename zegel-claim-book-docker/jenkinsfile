@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                git ''
+            }
+        }
+        stage('Build'){
+            steps {
+                sh 'chmod +x gradlew'
+                sh './gradlew clean build'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker compose build'
+            }
+        }
+        stage('Deploy with Docker Compose') {
+            steps {
+                sh 'docker compose up -d'
+            }
+        }
+    }
+}
